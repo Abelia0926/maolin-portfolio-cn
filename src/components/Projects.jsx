@@ -8,57 +8,56 @@ export default function Projects() {
 
   return (
     <motion.section
-      id="projects" 
-      className="min-h-screen py-20 px-4 md:px-8 text-secondary flex flex-col items-center justify-center relative overflow-hidden"
+      id="projects"
+      className="min-h-screen py-20 px-4 md:px-8 text-slate-700 flex flex-col items-center justify-center relative overflow-hidden"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-extrabold text-primary mb-12 text-center z-10"
+        className="text-4xl md:text-5xl font-extrabold text-sky-600 mb-12 text-center z-10"
         variants={headingVariants}
       >
-        My Projects
+        项目经历
       </motion.h2>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl"
-      >
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {projectsToDisplay.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-secondary/10 backdrop-blur-xs rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300"
-            variants={projectCardVariants} 
-            whileHover={{ y: -5 }} 
+            className="bg-white/75 border border-slate-200 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300"
+            variants={projectCardVariants}
+            whileHover={{ y: -5 }}
           >
             <div className="relative h-48 md:h-56 overflow-hidden">
               <img
                 src={project.imageUrl}
                 alt={project.title}
-                className="w-full h-full object-bottom-left"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+
               <motion.div
                 className="absolute bottom-0 left-0 right-0 p-4"
-                variants={fadeInGrow} 
+                variants={fadeInGrow}
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-12">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                   {project.title}
                 </h3>
               </motion.div>
             </div>
 
             <div className="p-4 flex flex-col justify-between h-auto">
-              <p className="text-gray-300 text-base mb-4 flex-grow">
+              <p className="text-slate-600 text-base mb-4 flex-grow leading-relaxed">
                 {project.description}
               </p>
-              
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-purple-800 text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                    className="bg-blue-100 text-sky-600 text-xs font-semibold px-2.5 py-0.5 rounded-full"
                   >
                     {tech}
                   </span>
@@ -71,7 +70,7 @@ export default function Projects() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 transition-colors duration-200 flex items-center"
+                    className="text-sky-600 hover:text-sky-600 transition-colors duration-200 flex items-center"
                   >
                     <FaGithub className="mr-1" /> GitHub
                   </a>
@@ -81,7 +80,7 @@ export default function Projects() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 transition-colors duration-200 flex items-center"
+                    className="text-sky-600 hover:text-sky-600 transition-colors duration-200 flex items-center"
                   >
                     <FaExternalLinkAlt className="mr-1" /> Live Demo
                   </a>
@@ -94,8 +93,8 @@ export default function Projects() {
 
       {projectsData.length > 3 && (
         <motion.a
-          href="https://github.com/Gojer16" 
-          className="mt-12 px-6 py-3 bg-purple-600 text-secondary font-semibold rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300"
+          href="https://github.com/Gojer16"
+          className="mt-12 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}

@@ -8,12 +8,12 @@ const Navbar = () => {
   const [hoveredLink, setHoveredLink] = useState(null); 
 
   const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
+    { name: '主页', id: 'home' },
+    { name: '关于', id: 'about' },
+    { name: '技能', id: 'skills' },
+    { name: '经历', id: 'experience' },
+    { name: '项目', id: 'projects' },
+    { name: '联系', id: 'contact' },
   ];
 
   useEffect(() => {
@@ -72,8 +72,8 @@ const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <a href="#home" className={`text-xl md:text-2xl font-bold ${scrolled ? 'text-secondary' : 'text-secondary'}`}>
-          Orlando Ascanio
+        <a href="#home" className={`text-xl md:text-2xl font-bold ${scrolled ? 'text-slate-500' : 'text-sky-600'}`}>
+          陈茂林 Abelia
         </a>
       </motion.div>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
           {hoveredLink && (
             <motion.span
               layoutId="hover-nav-pill" 
-              className={`absolute rounded-full ${scrolled ? 'bg-purple-600' : 'bg-purple-600'}`} 
+              className={`absolute rounded-full ${scrolled ? 'bg-blue300' : 'bg-sky-200'}`} 
               style={{
                 top: 0, 
                 left: hoveredLink.left,
@@ -104,8 +104,8 @@ const Navbar = () => {
             href={`#${link.id}`}
             className={`text-sm md:text-lg relative px-3 py-1 rounded-full
               ${activeSection === link.id
-                ? (scrolled ? 'text-secondary font-bold' : 'text-secondary font-bold')
-                : (scrolled ? 'text-gray-300 hover:text-secondary' : 'text-secondary hover:text-gray-200')
+                ? (scrolled ? 'text-slate-500 font-bold' : 'text-slate-500 font-bold')
+                : (scrolled ? 'text-slate-500 hover:text-slate-500' : 'text-slate-500 hover:text-gray-200')
               }
               transition-colors duration-200`}
             onClick={() => setActiveSection(link.id)}
@@ -123,7 +123,7 @@ const Navbar = () => {
             {activeSection === link.id && (
               <motion.span
                 layoutId="active-nav-pill" 
-                className={`absolute inset-0 rounded-full ${scrolled ? 'bg-purple-600' : 'bg-purple-600'} z-[-1]`} // z-[-1] here makes it go behind the link text
+                className={`absolute inset-0 rounded-full ${scrolled ? 'bg-sky-200' : 'bg-sky-200'} z-[-1]`} // z-[-1] here makes it go behind the link text
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
             )}
@@ -134,13 +134,13 @@ const Navbar = () => {
         href="#contact"
         className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-semibold transition-all duration-300 ease-in-out
           ${scrolled
-            ? 'bg-purple-600 hover:bg-purple-700 text-secondary shadow-md'
-            : 'bg-secondary hover:bg-gray-100 text-black shadow-lg'
+            ? 'bg-sky-200 hover:bg-sky-200 text-slate-500 shadow-md'
+            : 'bg-sky-200  hover:bg-sky-200 text-slate-500 shadow-lg'
           }`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Get in touch!
+        联系我
       </motion.a>
     </motion.nav>
   );

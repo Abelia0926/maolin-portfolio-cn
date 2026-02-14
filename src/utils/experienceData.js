@@ -1,16 +1,57 @@
 export const experienceData = [
   {
-    id: 'eti-software-engineer',
-    company: 'Escuela Técnica Industrial Mariano Fernández Fortique.',
-    location: 'Aragua, Cagua',
-    title: 'Software Engineer',
-    startDate: 'Jan 2025',
-    endDate: 'April 2025',
+    id: '战略咨询实习生（医疗与生命科学组）',
+    company: '安永帕特农 EY-Parthenon',
+    location: '远程/中国上海',
+    title: '战略咨询实习生',
+    startDate: '2026年2月',
+    endDate: '至今',
     description: [
-      'Served as principal software engineer for the school\'s first official website, coordinating with the school\'s CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.',
-      'Designed and implemented a full-stack web application using modern technologies including React, FastAPI, and MySQL.',
-      'Implemented responsive design principles and performance optimizations to ensure optimal user experience across all devices.',
-      'Collaborated with cross-functional teams to establish development workflows, code review processes, and deployment pipelines.'
+      '· 参与肿瘤创新药上市策略项目，围绕罕见靶点药物的商业化路径，支持项目组完成市场进入与增长策略分析。',
+      '· 搭建并迭代患者池测算模型，整合流行病学、检测渗透率、治疗可及性与价格假设，形成多情景市场规模测算。',
+      '· 整理专家访谈纪要与二手研究证据，建立“观点—证据—结论”映射，提升核心结论的可追溯性与说服力。',
+      '· 使用 Excel 建模与 Think-cell 图表体系，将复杂分析转化为可决策表达，独立交付假设树、分层瀑布图、竞争定位图及情景对比页，支持项目关键里程碑汇报。'
     ],
+  },
+  {
+    id: '医疗行业研究实习生',
+    company: '天风证券',
+    location: '远程',
+    title: '医药行业研究实习生',
+    startDate: '2025年12月',
+    endDate: '2026年2月',
+    description: [
+  '· 系统复盘创新药与医疗器械板块，深度研读上市公司年报、公告与监管政策，提炼行业趋势、核心驱动因素及主要投资风险。',
+  '· 参与深度报告章节撰写，按“结论—证据—边界”组织研究逻辑，完成关键论点论证与数据支撑，提升报告的严谨性与可读性。',
+  '· 协助资深分析师进行估值与测算相关工作，并使用 Excel 完成结构化数据整理与图表输出，形成市场规模测算与竞争格局分析页面，支持机构客户路演与沟通。'
+],
+  },
+  {
+    id: 'ipsos-consumer-insights-intern',
+    company: '益普索Ipsos',
+    location: '远程',
+    title: '消费者洞察实习生',
+    startDate: '2025年3月',
+    endDate: '2025年7月',
+    description: [
+      '· 负责口腔护理与美妆品类的社媒与消费者数据分析，使用 Excel 完成多源数据清洗、透视统计与可视化输出，跟踪价格带、用户情绪与竞争趋势。',
+      '· 搭建以 NSR（净情感度） 与 SoV（声量份额） 为核心的监测框架，结合时间序列识别品牌声量与情绪变化，并定位关键情绪转折点。',
+      '· 基于评论语料构建词云与高频议题聚类，提炼不同品牌在功效、价格、使用体验等维度的反馈差异，支持竞品对标与趋势判断。',
+      '· 将分析结果转化为客户提案可直接使用的图表与结论，包括趋势图、结构对比图与关键词洞察页，提升内部讨论效率与策略落地速度。'
+    ],
+  },
+  {
+    id: 'sz-medical-academy-ai-intern',
+    company: '深圳医学科学院',
+    location: '中国深圳',
+    title: '医学AI与数据实习生',
+    startDate: '2025年7月',
+    endDate: '2025年9月',
+    description: [
+  '· 围绕医学图像脑区标注任务，完成从手动标注到半自动流程的迭代，使用 Fiji/ImageJ 进行区域边界校准，并建立标准化区域对照表以支持后续分析。',
+  '· 基于 OpenCV 与结构化数据处理流程完成坐标与脑区标签映射，打通 ROI、空间坐标与区域信息，输出可直接用于下游分析的数据结果与可视化图表。',
+  '· 开发并验证后标注自动分配流程，通过区域 mask 自动判断坐标点归属并批量写入标签，减少重复人工操作，50%的人工时间并提升标注一致性与效率。',
+  '· 参与 atlas 配准流程优化，完成切片对齐、参数调整与结果精修，沉淀可复用操作规范，形成“自动配准 + 人工复核”的稳定工作流。'
+],
   }
 ];
