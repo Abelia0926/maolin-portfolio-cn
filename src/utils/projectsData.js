@@ -4,7 +4,7 @@ export const projectsData = [
     title: '医学图像脑区标注自动化',
     description: '围绕医学图像脑区标注任务，完成从手动标注到半自动流程的迭代。使用 Fiji/ImageJ 与 OpenCV 打通 ROI、空间坐标与脑区标签映射，开发批量自动赋值流程，并沉淀“自动配准 + 人工复核”的稳定工作流。',
     technologies: ['Python', 'OpenCV', 'Fiji/ImageJ', 'NumPy', 'Pandas'],
-    imageUrl: '/brain_annotation.png',
+    imageUrl: `${import.meta.env.BASE_URL}brain_annotation.png`,
     liveLink: 'https://drive.google.com/file/d/1TLKZzDh1_JBaRHa1DCGHKlT_8yyq2ZUX/view?usp=sharing',
   },
   {
