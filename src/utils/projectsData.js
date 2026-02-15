@@ -1,10 +1,14 @@
+import brainAnnotationImg from '../assets/projects/brain_annotation.png'
+import cgmImg from '../assets/projects/cgm.png'
+import taskManagerImg from '../assets/projects/task_manager.png'
+
 export const projectsData = [
   {
     id: 'project-1',
     title: '医学图像脑区标注自动化',
     description: '围绕医学图像脑区标注任务，完成从手动标注到半自动流程的迭代。使用 Fiji/ImageJ 与 OpenCV 打通 ROI、空间坐标与脑区标签映射，开发批量自动赋值流程，并沉淀“自动配准 + 人工复核”的稳定工作流。',
     technologies: ['Python', 'OpenCV', 'Fiji/ImageJ', 'NumPy', 'Pandas'],
-    imageUrl: `${import.meta.env.BASE_URL}brain_annotation.png`,
+    imageUrl: brainAnnotationImg,
     liveLink: 'https://drive.google.com/file/d/1TLKZzDh1_JBaRHa1DCGHKlT_8yyq2ZUX/view?usp=sharing',
   },
   {
@@ -12,7 +16,7 @@ export const projectsData = [
   title: 'HealthLoopQA：CGM 推理评测基准构建',
   description: '围绕连续血糖监测（CGM）场景，先完成 py-mgipsim 模拟器代码理解与扩展，并基于扩展 Hovorka 模型生成多场景仿真数据；随后进行异常注入与事件标注，按模型视角设计问答任务和 answer instruction，统一采用 interval / timestamp 作为标准答案格式，最终形成可解释、可复现的 LLM 推理评测基准。',
   technologies: ['Python', 'py-mgipsim', 'Hovorka Model', 'CGM Simulation', 'LLM Evaluation', 'Time Series', 'Prompt Design', 'JSON'],
-  imageUrl: '/cgm.png',
+  imageUrl: cgmImg,
   githubLink: 'https://github.com/Abelia0926/ExtendedCambridgeModel',
 },
   {
@@ -26,7 +30,7 @@ export const projectsData = [
     'CodeBuddy Deployment',
     'Tencent API'
   ],
-  imageUrl: '/task_manager.png',
+  imageUrl: taskManagerImg,
   liveLink: 'http://124.221.76.252'
 }
   // {
